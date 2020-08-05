@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Link
+Name=Preferences
+Icon=preferences-desktop
+URL=menu://applications/DesktopSettings
