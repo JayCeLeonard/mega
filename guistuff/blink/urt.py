@@ -1,7 +1,7 @@
 
   
 #!/usr/bin/python
-
+#this is a test for the git
 import serial
 import sys
 import time
