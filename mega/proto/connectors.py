@@ -1,6 +1,6 @@
 
 import serial
-#git test 1
+#git test 2
 class PIN:
     def __init__(self,pin_num,pin_color):
         self.num = pin_num #int
