@@ -1,4 +1,4 @@
 import os
-os.system('cmd /k "gitup"')
+os.system('gitup')
 
-os.system('cmd /k "git merge -m"standard update"')
+os.system('git merge -m"standard update"')
