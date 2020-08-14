@@ -2,6 +2,12 @@ from guizero import App, PushButton,Box, TextBox,Text,ListBox,ButtonGroup
 from connectors import CONNECTOR, PIN
 import os
 
+#for the love of got clean this shit up, all of the functions for the app should be in their oun library
+
+def updatefunc():
+    os.system('gitup')
+    os.system('git merge -m"standard update"')
+
 app = App(title = 'meeting console', width = 750, height = 750, layout='grid' , when_closed= updatefunc)
 app.tk.attributes("-fullscreen",True)
 
