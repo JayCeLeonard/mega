@@ -2,7 +2,7 @@ from guizero import App, PushButton,Box, TextBox,Text,ListBox,ButtonGroup
 from connectors import CONNECTOR, PIN
 import os
 
-app = App(title = 'meeting console', width = 750, height = 750, layout='grid')
+app = App(title = 'meeting console', width = 750, height = 750, layout='grid' , when_closed= updatefunc)
 app.tk.attributes("-fullscreen",True)
 
 os.system('python blink_setup.py')
@@ -21,11 +21,19 @@ def bsfunc():
     app.update()
     input_box.after(0, do_nothing)
 
+def restart():
+    app.distroy()
+
+def updatefunc():
+    os.system('gitup')
+    os.system('git merge -m"standard update"')
         
 button = PushButton(app,text ="No test Harness selected", command=bsfunc, grid=[0,0])
+updatebutton = PushButton(app,text ="update", command=restart)
+
 def list_sel(value):
     button.text= value
-    
+
 
 
 
