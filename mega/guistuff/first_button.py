@@ -1,4 +1,4 @@
-from guizero import App, PushButton,Box, TextBox,Text,ListBox,ButtonGroup
+from guizero import App, PushButton,Box, TextBox,Text,ListBox,ButtonGroup,yesno,Window
 from connectors import CONNECTOR, PIN
 import os
 
@@ -8,10 +8,15 @@ def updatefunc():
     os.system('gitup')
     os.system('git merge -m"standard update"')
 
-app = App(title = 'meeting console', width = 750, height = 750, layout='grid' , when_closed= updatefunc)
+app = App(title = 'meeting console', width = 750, height = 750, layout='grid')
 app.tk.attributes("-fullscreen",True)
-
 os.system('python blink_setup.py')
+
+window = Window(app,title= "restart the box")
+window.full_screen= True # this dont fukin wrk you btch
+
+windowtxt = Text(window, text="please restart the box (flip the power switch on and off)", size= 10)
+window.hide()
 
 def do_nothing():
     x = CONNECTOR(button.text)
@@ -27,21 +32,27 @@ def bsfunc():
     app.update()
     input_box.after(0, do_nothing)
 
-def restart():
-    app.distroy()
+# have a yes no box connected to the app
+# if no is selected do nothing
+#if yes
+    #run the update bs
+    #find out how to restart the app
 
-def updatefunc():
-    os.system('gitup')
-    os.system('git merge -m"standard update"')
+def restart():
+    if(yesno("Update", "Did you mean to press the update button?")):
+        os.system('gitup')
+        os.system('git merge -m"standard update"')
+        window.show()
         
-button = PushButton(app,text ="No test Harness selected", command=bsfunc, grid=[0,0])
-updatebutton = PushButton(app,text ="update", command=restart)
+
 
 def list_sel(value):
     button.text= value
 
 
 
+button = PushButton(app,text ="No test Harness selected", command=bsfunc, grid=[0,0])
+updatebutton = PushButton(app,text ="update", command=restart, grid=[0,1])
 
 text = Text(app, text="click on the tester that you want in the box below", grid=[100,0])
 resultText = Text(app, grid=[50,0],text="pick connector")
