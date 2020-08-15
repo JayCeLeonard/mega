@@ -2,7 +2,8 @@ from guizero import App, PushButton,Box, TextBox,Text,ListBox,ButtonGroup,yesno,
 from connectors import CONNECTOR, PIN
 import os
 
-#for the love of got clean this shit up, all of the functions for the app should be in their oun library
+# for the love of got clean this shit up, all of the functions for the app should be in their oun library
+#did the update feature actually work?
 
 def updatefunc():
     os.system('gitup')
@@ -43,8 +44,6 @@ def restart():
         os.system('gitup')
         os.system('git merge -m"standard update"')
         window.show()
-        
-
 
 def list_sel(value):
     button.text= value
