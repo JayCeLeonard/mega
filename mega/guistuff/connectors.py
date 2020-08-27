@@ -24,10 +24,6 @@ class PIN:
         self.outPin = int(OUT_PINS) # this is the value that will be in a bit shift >> opeator
         self.color = str(COLOR)
 
-
-#list of the input pins
-
-
 class CONNECTOR:
     def __init__(self,name): # pins has to  be a list
         self.pins = connectors(name)
@@ -77,9 +73,6 @@ PIN(5,5,"brown"),PIN(6,6,"brown"),PIN(7,7,"brown"),PIN(8,8,"not brown"),PIN(9,9,
 PIN(11,11,"brown"),PIN(12,12,"not brown"),PIN(13,13,"brown"),PIN(14,14,"brown"),PIN(15,15,"not brown"),PIN(16,16,"brown"),
 PIN(17,17,"brown"),PIN(18,18,"not brown"),PIN(19,19,"brown"),PIN(20,20,"brown"),PIN(21,21,"not brown")])
 
-
-
-
 #set this to take in a string later
 def connectors(arg):
     ARR = {
@@ -97,4 +90,3 @@ def connectors(arg):
 
     x = ARR.get(arg,default_connecotr)
     return x
-
