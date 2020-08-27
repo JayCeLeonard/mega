@@ -38,6 +38,7 @@ def bsfunc():
 #if yes
     #run the update bs
     #find out how to restart the app
+    #there is no place like home
 
 def restart():
     if(yesno("Update", "Did you mean to press the update button?")):
