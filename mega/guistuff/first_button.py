@@ -14,7 +14,7 @@ app.tk.attributes("-fullscreen",True)
 os.system('python blink_setup.py')
 
 window = Window(app,title= "restart the box")
-window.full_screen= True # this dont fukin wrk you btch
+window.full_screen= True 
 
 windowtxt = Text(window, text="please restart the box (flip the power switch on and off)", size= 10)
 window.hide()
