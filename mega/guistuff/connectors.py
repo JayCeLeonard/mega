@@ -77,10 +77,29 @@ PIN(5,5,"brown"),PIN(6,6,"brown"),PIN(7,7,"brown"),PIN(8,8,"not brown"),PIN(9,9,
 PIN(11,11,"brown"),PIN(12,12,"not brown"),PIN(13,13,"brown"),PIN(14,14,"brown"),PIN(15,15,"not brown"),PIN(16,16,"brown"),
 PIN(17,17,"brown"),PIN(18,18,"not brown"),PIN(19,19,"brown"),PIN(20,20,"brown"),PIN(21,21,"not brown")])
 
+HermNS = list([PIN(0,0,"brown"),PIN(1,1,"not brown"),PIN(2,2,"brown"),PIN(3,3,"brown"),PIN(4,4,"not brown"),
+PIN(5,5,"brown"),PIN(6,6,"brown"),PIN(7,7,"brown"),PIN(8,8,"not brown"),PIN(9,9,"brown"),PIN(10,10,"brown"),
+PIN(11,11,"brown"),PIN(12,12,"not brown"),PIN(13,13,"brown"),PIN(14,14,"brown"),PIN(15,15,"not brown"),PIN(16,16,"brown"),
+PIN(17,17,"brown"),PIN(18,18,"not brown"),PIN(19,19,"brown"),PIN(20,20,"brown"),PIN(21,21,"not brown")])
+
+Truck-Harnes = list([PIN(0,0,"brown"),PIN(1,1,"not brown"),PIN(2,2,"brown"),PIN(3,3,"brown"),PIN(4,4,"not brown"),
+PIN(5,5,"brown"),PIN(6,6,"brown"),PIN(7,7,"brown"),PIN(8,8,"not brown"),PIN(9,9,"brown"),PIN(10,10,"brown"),
+PIN(11,11,"brown"),PIN(12,12,"not brown"),PIN(13,13,"brown"),PIN(14,14,"brown"),PIN(15,15,"not brown"),PIN(16,16,"brown"),
+PIN(17,17,"brown"),PIN(18,18,"not brown"),PIN(19,19,"brown"),PIN(20,20,"brown"),PIN(21,21,"not brown")])
+
 #set this to take in a string later
 def connectors(arg):
     ARR = {
         'Fish': default_connecotr
+        "HermNS": default_connecotr
+        "Truck-Harnes": default_connecotr
+        "ODOT-F12-0003": default_connecotr
+        "ff02-Line-ST-jump": default_connecotr
+        "Camper Speaker Jumpers": default_connecotr
+        "Schwant": default_connecotr
+        "Schwintek": default_connecotr
+        "Camper Hernac": default_connecotr
+        "floor to Truck Hermac": default_connecotr
     }
 
     x = ARR.get(arg,default_connecotr)
