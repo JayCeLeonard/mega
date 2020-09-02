@@ -41,7 +41,7 @@ class CONNECTOR:
         x = input_pins[expected_pin]
         if ( GPIO.input(x) == 1):
             x = str(input_pins[expected_pin])
-            return x + "pass"
+            return x + " pass"
         else:
             swap_index = 100
             for pin in self.pins:
@@ -72,6 +72,8 @@ default_connecotr = list([PIN(0,0,"brown"),PIN(1,1,"not brown"),PIN(2,2,"brown")
 PIN(5,5,"brown"),PIN(6,6,"brown"),PIN(7,7,"brown"),PIN(8,8,"not brown"),PIN(9,9,"brown"),PIN(10,10,"brown"),
 PIN(11,11,"brown"),PIN(12,12,"not brown"),PIN(13,13,"brown"),PIN(14,14,"brown"),PIN(15,15,"not brown"),PIN(16,16,"brown"),
 PIN(17,17,"brown"),PIN(18,18,"not brown"),PIN(19,19,"brown"),PIN(20,20,"brown"),PIN(21,21,"not brown")])
+
+
 
 #set this to take in a string later
 def connectors(arg):
