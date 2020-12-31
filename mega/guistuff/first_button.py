@@ -33,13 +33,8 @@ def bsfunc():
     app.update()
     input_box.after(0, do_nothing)
 
-# have a yes no box connected to the app
-# if no is selected do nothing
-#if yes
-    #run the update bs
-    #find out how to restart the app
-    #there is no place like home
 
+#this will update the code to what is in the git repo
 def restart():
     if(yesno("Update", "Did you mean to press the update button?")):
         os.system('gitup')
@@ -58,6 +53,8 @@ text = Text(app, text="click on the tester that you want in the box below", grid
 resultText = Text(app, grid=[50,0],text="pick connector")
 
 input_box = TextBox(app,grid=[60,50],multiline=True,height="fill",width="fill")
+
+#this list box is very important, I would perfer to have items be a list in a shared header
 listbox = ListBox(app, items=["Fish","HermNS","Truck Harnes","ODOT-F12-0003","ff02-Line-ST-jump","Camper Speaker Jumpers","Schwant","Schwintek","Camper Hernac","floor to Truck Hermac"],command = list_sel,grid=[0,50],scrollbar=True)
 input_box.text = "select the test"
 
