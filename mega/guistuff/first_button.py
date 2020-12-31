@@ -55,7 +55,7 @@ resultText = Text(app, grid=[50,0],text="pick connector")
 input_box = TextBox(app,grid=[60,50],multiline=True,height="fill",width="fill")
 
 #this list box is very important, I would perfer to have items be a list in a shared header
-listbox = ListBox(app, items=["Fish","HermNS","Truck Harnes","ODOT-F12-0003","ff02-Line-ST-jump","Camper Speaker Jumpers","Schwant","Schwintek","Camper Hernac","floor to Truck Hermac"],command = list_sel,grid=[0,50],scrollbar=True)
+listbox = ListBox(app, items=["Fish","HermN3","Truck Harnes","ODOT-F12-0003","ff02-Line-ST-jump","Camper Speaker Jumpers","Schwant","Schwintek","Camper Hernac","floor to Truck Hermac"],command = list_sel,grid=[0,50],scrollbar=True)
 input_box.text = "select the test"
 
 
